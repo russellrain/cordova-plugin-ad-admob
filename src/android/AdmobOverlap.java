@@ -261,6 +261,7 @@ public class AdmobOverlap implements PluginDelegate {
 			String deviceId = Util.md5(ANDROID_ID).toUpperCase();
 			builder.addTestDevice(deviceId);		
 		}
+		builder.tagForChildDirectedTreatment(true);
 		AdRequest request = builder.build();
 		bannerView.loadAd(request);	            	
 	}
@@ -418,6 +419,7 @@ public class AdmobOverlap implements PluginDelegate {
 			String deviceId = Util.md5(ANDROID_ID).toUpperCase();
 			builder.addTestDevice(deviceId);		
 		}
+		builder.tagForChildDirectedTreatment(true);
 		AdRequest request = builder.build();			
 		interstitialView.loadAd(request);		
 	}
